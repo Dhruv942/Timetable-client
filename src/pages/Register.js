@@ -21,7 +21,7 @@ const Register = () => {
   const register = () => {
     const { name, email, password } = user;
     if (name && email && password) {
-      axios.post("http://localhost:9002/register", user).then((res) => {
+      axios.post("http://localhost:9003/register", user).then((res) => {
         alert(res.data.message);
       });
     } else {

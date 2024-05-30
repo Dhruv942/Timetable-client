@@ -1,7 +1,7 @@
 import React from "react";
 
 const Section = () => {
-  return <div>sdf</div>;
+  return <div></div>;
 };
 
 export default Section;

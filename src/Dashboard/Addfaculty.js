@@ -12,7 +12,7 @@ const Addfaculty = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:9002/faculty");
+        const response = await axios.get("http://localhost:9003/faculty");
         setFacultyData(response.data);
         setLoading(false);
       } catch (error) {
@@ -27,7 +27,7 @@ const Addfaculty = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:9002/addFaculty", {
+      await axios.post("http://localhost:9003/addFaculty", {
         facultyName,
         facultyNumber,
         email,
@@ -35,7 +35,7 @@ const Addfaculty = () => {
       });
 
       // After successful submission, fetch the updated data
-      const response = await axios.get("http://localhost:9002/faculty");
+      const response = await axios.get("http://localhost:9003/faculty");
       setFacultyData(response.data);
 
       setFacultyName("");
@@ -63,6 +63,7 @@ const Addfaculty = () => {
             type="text"
             id="fcname"
             value={facultyName}
+            onChange={(e) => setFacultyName(e.target.value)} // Update facultyName state
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Name:"
             required

@@ -8,6 +8,7 @@ import Addfaculty from "./Dashboard/Addfaculty";
 import Addsubject from "./Dashboard/Addsubject";
 import Addsemy from "./Dashboard/Addsemy";
 import Section from "./Dashboard/Section";
+import Timetable from "./Dashboard/Timetable";
 const App = () => {
   return (
     <div>
@@ -23,6 +24,7 @@ const App = () => {
               <Route path="/adds" element={<Addsubject />} />
               <Route path="/addsy" element={<Addsemy />} />
               <Route path="/sec" element={<Section />} />
+              <Route path="/timetable" element={<Timetable />} />
             </Routes>
           </div>
         </div>
